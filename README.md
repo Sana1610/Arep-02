@@ -32,7 +32,7 @@ This project is a simple web framework implemented in Java that handles REST ser
 
 1. **Clone the Repository**
    ```sh
-   git clone https://github.com/juaneortiz1/lab02Arep.git   
+   git clone https://github.com/Sana1610/Arep-02.git  
    ```
 
 2. **Compile the Project**
@@ -47,73 +47,38 @@ This project is a simple web framework implemented in Java that handles REST ser
 
 ### Running the Server
 
-To start the server, run the `MainApp` class. This will start the server on port `8080` and set up the specified routes and static file location.
+To start the server, run the `MainApp` class. This will start the server on port `35000` and set up the specified routes and static file location.
 
-```sh
-java -cp bin edu.escuelaing.arep.ASE.app.MainApp
-```
+**Compile the Source Code**:
+   - Compile the Java source files using the `javac` command:
+     ```bash
+      javac -d out -sourcepath src/main/java src/main/java/arep/webserver/*.java
+      ```
+**Run the Web Server**:
+   - After compiling, start the web server by running:
+     ```bash
+     java -cp out arep.webserver.SimpleWebServer
+     ```
+
 
 ### Example Usage
 
 1. **Access REST Services:**
 
-    - `http://localhost:8080/hello?name=Pedro`
-    - `http://localhost:8080/pi`
-    - `http://localhost:8080/index.html`
+    - `http://localhost:35000/hello?name=Jose`
+    - `http://localhost:35000/pi`
+    - `http://localhost:35000/index.html`
 
 
 2. **Access Static Files:**
 
    Place your static files in the `src/main/resources/` directory. You can access them directly via the URL path.
-
-## Testing
-
-### Running Tests
-
-Tests can be run to ensure the correctness of the framework.
-
-
-### Test Results
-
-**Test 1: `testHandleGetRequest`**
-
-- **Description**: Validates the handling of a GET request for a static file.
-- **Expected Result**: HTTP 200 OK with content type `text/html`.
-
-
-
-**Test 2: `testHandlePostRequest`**
-
-- **Description**: Tests handling of POST requests and saving data to a file.
-- **Expected Result**: File creation confirmation and HTTP 200 OK response.
-
-
-
-
-
-**Test 3: `testAddQueryParam`**
-- **Description**: Tests the addQueryParam method of the Request class. It ensures that query parameters are added correctly to a request and can be retrieved.
-- **Expected Result**: The query parameter "key1" should have the value "value1".
-
-
-
-
-**Test 4: `testGetValues`**
-- **Description**: Tests the getValues method of the Request class. It ensures that the values of query parameters can be retrieved correctly.
-- **Expected Result**: The query parameter "key2" should have the value "value2".
-
-
-
-
-**Test 5: `testGetRoute`**
-- **Description**: Tests the RouteManager class to ensure that routes are correctly registered and retrieved. It checks if a route registered with a path returns the expected response when handled.
-- **Expected Result**: The route for "/test" should return "Test Response".
-
-
+   
 
 ## Screenshots
-
-
+![image](https://github.com/user-attachments/assets/4dd6659b-52fb-4a84-94ae-519b16301f5d)
+![image](https://github.com/user-attachments/assets/371a378c-316b-4b35-b684-676666f03987)
+![image](https://github.com/user-attachments/assets/e82cf11d-d685-4ade-84c4-ff2008604da7)
 
 ## Author
 This project was developed by Santiago Alberto Naranjo Abril https://github.com/Sana1610.
